@@ -14,3 +14,6 @@ print "FIRST LINE : $first_line";
 seek ($fh, 0,2); #move to end;
 print $fh "ADDED USING +< mode\n";
 close $fh
+
+
+#IN THIS WE ARE RADING THE FILE AND WRITNG IN THE FILE AT THE SAME TIME WITHOUT THE TRUNCATING THE FILE SAFELY 
