@@ -24,3 +24,8 @@ Focuses on writing to a file using the write mode (`>`), which overwrites existi
 
 ### `fileOpen.pl`
 A basic script to create a new file and write text into it using the write mode (`>`).
+
+## Subdirectories
+
+### `ADVANCE_CONCEPT`
+Contains scripts demonstrating advanced file handling concepts such as atomic writes, file locking, file test operators, and efficient large file processing.
