@@ -1,7 +1,19 @@
-open my $fh, '>>', 'log.txt' or die $!;
-# flock($fh,LOCK_EX) or die "Cannot lock File";
+my %conf;
+# open my $fh , '<', $file_path or die $!;
 
-# print $fh "process $$ Writing safely\n";
+# while(my $line = <$fh>){
+#     chomp  $line;
+#     next if $line =~ /^\s*$/; #skip empty line
+#     next if $line =~ /^\s*#/; # skip the comments
 
-# flock($fh,LOCK_UN);
+#     if($line =~ /^\s*(\w+)\s*=\s*(.+)\s*$/){
+#         my $key = $1;
+#         my $value = $2;
+#         $conf{$key} = $value;
+#     }
+    
+# }
 # close $fh;
+# print "Host: $conf{host}\n";
+# print "Port: $conf{port}\n";
+# print "Debug: $conf{debug}\n";

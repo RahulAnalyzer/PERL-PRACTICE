@@ -1,0 +1,6 @@
+INFO Application started
+WARN Low disk space
+INFO User logged in
+ERROR Database connection failed
+WARN Memory usage high
+ERROR Timeout occurred
