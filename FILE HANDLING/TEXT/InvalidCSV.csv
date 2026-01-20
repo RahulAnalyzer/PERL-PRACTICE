@@ -1,0 +1,5 @@
+id,name,email,role
+1,Rahul,rahul@test.com,admin
+2,Amit,amit@test.com,user
+3,,bademail,manager
+4,Sara,sara@test.com,user
