@@ -15,5 +15,3 @@ sub print_matching_line{
 }
 my $file_path = "$Bin/../TEXT/TESTING_FILE.txt";
 print_matching_line($file_path,'are')
-
-
