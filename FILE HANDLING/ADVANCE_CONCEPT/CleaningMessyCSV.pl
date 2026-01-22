@@ -1,3 +1,95 @@
+use strict;
+use warnings;
+use FindBin qw($Bin);
+use Text::CSV;
+
+main();
+
+sub main{
+    
+     my $input = "$Bin/../TEXT/MessayData.csv";
+     my $clean = "$Bin/../TEXT/CleanDataCSV.csv";
+     my $reject = "$Bin/../TEXT/RejectCSV.csv";
+
+    Clean_csv($input, $clean , $reject);
+}
+
+sub Clean_csv{
+    # FIX DECLARE THE SUBROUTINE
+    my ($input, $clean , $reject) = @_;
+
+    my $csv = Text::CSV->new({
+        Binary => 1,
+        auto_diag => 1,
+        allow_loose_escapes => 1, 
+        allow_loose_quotes => 1,
+    });
+
+    open my $in, '<', $input or die "Cannot open the input file: $!";
+    open my $ok, '>', $clean or die "Cannot open the Clean File: $!";
+    open my $bad, '>', $reject or die "cannot open the Reject File: $!";
+
+    my $header = $csv->getline($in);
+    $csv->print($ok , $header);
+    print $ok "\n";
+    $csv->print($bad, [@$header , 'REASON']);
+    print $bad "\n";
+
+    while(my $row = $csv->getline($in)){
+        my ($id , $name , $age , $email , $salary , $join_date , $department, $notes) = @$row;
+        my @error;
+    
+
+    # cleaning data
+    #FIX : Added proper variable assignment for the for loop
+    #FIX: Clean all fields, not just 5
+    for my $field ($id , $name , $age , $email , $salary , $join_date , $department, $notes){
+        next unless defined $field;
+        $field =~ s/^\s*|\s+$//g;
+        $field =~ s/[^\x20-\x7E]//g;
+    }
+
+    # validation 
+    push @error, 'MISSING NAME' unless $name;
+    push @error, 'INVALID ID' unless defined $id && $id =~ /^\d+$/;
+    push @error, 'INVALID AGE' unless defined $age && $age =~ /^\d+$/;
+    push @error, 'INVALID SALARY' unless defined $salary && $salary =~ /^\d+$/;
+    push @error, 'INVALID EMAIL' unless defined $email && $email =~ /^[\w.\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+    
+
+
+    # FIX: Added validation for join date
+        if (defined $join_date && $join_date ne '') {
+            # Check for valid date format (yyyy-mm-dd, dd/mm/yyyy, or yyyy/mm/dd)
+            unless ($join_date =~ /^\d{4}-\d{2}-\d{2}$/ || 
+                    $join_date =~ /^\d{2}\/\d{2}\/\d{4}$/ ||
+                    $join_date =~ /^\d{4}\/\d{2}\/\d{2}$/) {
+                push @error, 'INVALID DATE FORMAT';
+            }
+        }
+        
+        # FIX: Added validation for department
+        push @error, 'MISSING DEPARTMENT' unless defined $department && $department ne '';
+
+
+    # OUTPUT
+    if(@error){
+        # FIX: Added comma and proper method call syntax
+        $csv->print($bad , [@$row, join',',@error]);
+        print $bad "\n";
+    }
+    else{
+        $csv->print($ok, [$id, $name, $age, $email, $salary, $join_date, $department, $notes]);
+        print $ok "\n";
+
+    }
+}
+# FIX Moved close statement inside the Subroutine
+close $in;
+close $ok;
+close $bad;
+}
+
 # use strict;
 # use warnings;
 # use FindBin qw($Bin);
@@ -125,95 +217,4 @@
 # close $ok;
 # close $bad;
 
-use strict;
-use warnings;
-use FindBin qw($Bin);
-use Text::CSV;
-
-main();
-
-sub main{
-    
-     my $input = "$Bin/../TEXT/MessayData.csv";
-     my $clean = "$Bin/../TEXT/CleanDataCSV.csv";
-     my $reject = "$Bin/../TEXT/RejectCSV.csv";
-
-    Clean_csv($input, $clean , $reject);
-}
-
-sub Clean_csv{
-    # FIX DECLARE THE SUBROUTINE
-    my ($input, $clean , $reject) = @_;
-
-    my $csv = Text::CSV->new({
-        Binary => 1,
-        auto_diag => 1,
-        allow_loose_escapes => 1, 
-        allow_loose_quotes => 1,
-    });
-
-    open my $in, '<', $input or die "Cannot open the input file: $!";
-    open my $ok, '>', $clean or die "Cannot open the Clean File: $!";
-    open my $bad, '>', $reject or die "cannot open the Reject File: $!";
-
-    my $header = $csv->getline($in);
-    $csv->print($ok , $header);
-    print $ok "\n";
-    $csv->print($bad, [@$header , 'REASON']);
-    print $bad "\n";
-
-    while(my $row = $csv->getline($in)){
-        my ($id , $name , $age , $email , $salary , $join_date , $department, $notes) = @$row;
-        my @error;
-    
-
-    # cleaning data
-    #FIX : Added proper variable assignment for the for loop
-    #FIX: Clean all fields, not just 5
-    for my $field ($id , $name , $age , $email , $salary , $join_date , $department, $notes){
-        next unless defined $field;
-        $field =~ s/^\s*|\s+$//g;
-        $field =~ s/[^\x20-\x7E]//g;
-    }
-
-    # validation 
-    push @error, 'MISSING NAME' unless $name;
-    push @error, 'INVALID ID' unless defined $id && $id =~ /^\d+$/;
-    push @error, 'INVALID AGE' unless defined $age && $age =~ /^\d+$/;
-    push @error, 'INVALID SALARY' unless defined $salary && $salary =~ /^\d+$/;
-    push @error, 'INVALID EMAIL' unless defined $email && $email =~ /^[\w.\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
-    
-
-
-    # FIX: Added validation for join date
-        if (defined $join_date && $join_date ne '') {
-            # Check for valid date format (yyyy-mm-dd, dd/mm/yyyy, or yyyy/mm/dd)
-            unless ($join_date =~ /^\d{4}-\d{2}-\d{2}$/ || 
-                    $join_date =~ /^\d{2}\/\d{2}\/\d{4}$/ ||
-                    $join_date =~ /^\d{4}\/\d{2}\/\d{2}$/) {
-                push @error, 'INVALID DATE FORMAT';
-            }
-        }
-        
-        # FIX: Added validation for department
-        push @error, 'MISSING DEPARTMENT' unless defined $department && $department ne '';
-
-
-    # OUTPUT
-    if(@error){
-        # FIX: Added comma and proper method call syntax
-        $csv->print($bad , [@$row, join',',@error]);
-        print $bad "\n";
-    }
-    else{
-        $csv->print($ok, [$id, $name, $age, $email, $salary, $join_date, $department, $notes]);
-        print $ok "\n";
-
-    }
-}
-# FIX Moved close statement inside the Subroutine
-close $in;
-close $ok;
-close $bad;
-}
 
