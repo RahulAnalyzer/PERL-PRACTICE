@@ -1,0 +1,16 @@
+ID ,Name              ,Age    ,Email                    ,Salary        ,JoinDate   ,Department ,Notes                   ,REASON
+ 2 ,"Anita Singh"     ,       ,anita.singh@@example.com ,60000         ,15/02/2022 ,HR         ,                        ,INVALID_Email
+ 3 ,"John, Doe"       ,29     ,john.doe@example.com     ,70000         ,2022/03/01 ,Finance    ,"Has comma in name"     ,INVALID_Name
+ 4 ,Michael           ,Thirty ,michael@example.com      ,80000         ,2022-04-10 ,IT         ,"Age is text"           ,INVALID_Age
+ 5 ,                  ,35     ,missing.name@example.com ,90000         ,2022-05-20 ,Sales      ,"Name missing"          ,MISSING_Name
+ 6 ,"David Kumar"     ,28     ,david.kumar@example.com  ,not_available ,2022-06-18 ,IT         ,"Salary invalid"        ,INVALID_Salary
+ 7 ,"Neha Verma"      ,27     ,neha.verma@example.com   ,65000         ,           ,Marketing  ,"Missing join date"     ,MISSING_JoinDate
+ 8 ,"Rohit Patil"     ,26     ,rohit.patil@example      ,55000         ,2022-08-01 ,IT         ,"Invalid email"         ,INVALID_Email
+16 ,"Robert, Jr"      ,45     ,robert.jr@example.com    ,82000         ,2021-11-20 ,Finance    ,"Comma in name"         ,INVALID_Name
+19 ,"Vikram, Singh"   ,Thirty ,v.singh@example.com      ,60000         ,2022-04-12 ,Sales      ,"Age text with comma"   ,"INVALID_Name,INVALID_Age"
+20 ,"Meena Joshi"     ,31     ,meena.joshi@example.com  ,"USD 65000"   ,2022-05-10 ,HR         ,"Salary with currency"  ,INVALID_Salary
+22 ,"Kunal, Sharma"   ,26     ,kunal.sharma@example.com ,51000         ,2022-07-18 ,IT         ,"Recoverable name"      ,INVALID_Name
+25 ,"Sonia, Malhotra" ,28     ,sonia.m@example.com      ,59000         ,2022-10-30 ,HR         ,"Comma name ok"         ,INVALID_Name
+26 ,"Ashish,Gupta"    ,30     ,ashish.gupta@example.com ,61000         ,2022-11-05 ,IT         ,"Column shifted"        ,INVALID_Name
+29 ,"Manoj, Tiwari"   ,31     ,manoj.t@example.com      ,67000         ,2023-02-10 ,Sales      ,Recoverable             ,INVALID_Name
+30 ,                  ,       ,                         ,              ,           ,           ,"Completely broken row" ,"MISSING_JoinDate,MISSING_Salary,MISSING_Department,MISSING_Name,MISSING_Email"

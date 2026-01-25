@@ -1,0 +1,38 @@
+ID,Name,Age,Email,Salary,JoinDate,Department,Notes
+1,Rahul Sharma,23,rahul.sharma@example.com,50000,2022-01-15,IT,Good performer
+2,Anita Singh,,anita.singh@@example.com,60000,15/02/2022,HR,
+3,"John, Doe",29,john.doe@example.com,70000,2022/03/01,Finance,"Has comma in name"
+4,Michael,Thirty,michael@example.com,80000,2022-04-10,IT,Age is text
+5,,35,missing.name@example.com,90000,2022-05-20,Sales,Name missing
+6,David Kumar,28,david.kumar@example.com,not_available,2022-06-18,IT,Salary invalid
+7,Neha Verma,27,neha.verma@example.com,65000,,Marketing,Missing join date
+8,Rohit Patil,26,rohit.patil@example,55000,2022-08-01,IT,Invalid email
+9,Sunita Rao,31,sunita.rao@example.com,72000,2022-09-12,"HR","Department quoted"
+10,"Amit   Shah",34,amit.shah@example.com,68000,2022-10-05,Finance,"Extra spaces in name"
+11,Kiran Joshi,29,kiran.joshi@example.com,70000,2022-11-30,Finance,"Trailing space "
+12,Pooja Mehta,25,pooja.mehta@example.com,62000,2022-12-01,IT,
+13,Ramesh Kumar,,ramesh.kumar@example.com,58000,2023-01-10,Sales,Age missing
+14,Alok Mishra,33,alok.mishra@example.com,61000,2023-02-05,IT,Normal row
+15,"Priya
+Malhotra",28,priya.m@example.com,64000,2023-03-01,HR,"Multiline name"
+16,"Robert, Jr",45,robert.jr@example.com,82000,2021-11-20,Finance,Comma in name
+17,Sneha Patel,27,sneha.patel@example.com,54000,2022-13-01,Marketing,Invalid month
+18,Ajay Kumar,29,ajay.kumar@example.com,57000,2022-02-30,IT,Invalid date
+19,"Vikram, Singh",Thirty,v.singh@example.com,60000,2022-04-12,Sales,Age text with comma
+20,Meena Joshi,31,meena.joshi@example.com,USD 65000,2022-05-10,HR,Salary with currency
+21,Arjun Verma,24,arjun.verma@example.com,48000,2022/06/15,IT,Date slash format
+22,"Kunal, Sharma",26,kunal.sharma@example.com,51000,2022-07-18,IT,Recoverable name
+23,Neel Shah, ,neel.shah@example.com,53000,2022-08-20,Finance,Whitespace age
+24,Pankaj Yadav,32,pankaj.yadav@example.com,56000,2022-09-25,Operations,
+25,"Sonia, Malhotra",28,sonia.m@example.com,59000,2022-10-30,HR,Comma name ok
+26,Ashish,Gupta,30,ashish.gupta@example.com,61000,2022-11-05,IT,Column shifted
+27,Divya Nair,27,divya.nair@example.com,62000,2022-12-15,Marketing,Normal
+28,Ravi Kumar,29,ravi.kumar@example.com,64000,2023-01-18,IT,"Extra, comma, in notes"
+29,"Manoj, Tiwari",31,manoj.t@example.com,67000,2023-02-10,Sales,Recoverable
+30,,,"",,,"","Completely broken row"
+31,Sameer Khan,34,sameer.khan@example.com,70000,2023-03-12,Finance,Normal
+32,"Nisha
+Gupta",26,nisha.g@example.com,52000,2023-04-01,HR,Multiline again
+33,Karthik R,28,karthik.r@example.com,55000,2023-05-10,IT,Normal
+34,"Badly,Quoted,Name,29,bad@example.com,50000,2023-06-01,IT,Broken quote
+35,Ayesha Khan,27,ayesha.khan@example.com,58000,2023-07-15,HR,Normal

@@ -1,0 +1,19 @@
+ID ,Name           ,Age ,Email                    ,Salary ,JoinDate   ,Department ,Notes
+ 1 ,"Rahul Sharma" , 23 ,rahul.sharma@example.com , 50000 ,2022-01-15 ,IT         ,"Good performer"
+ 9 ,"Sunita Rao"   , 31 ,sunita.rao@example.com   , 72000 ,2022-09-12 ,HR         ,"Department quoted"
+10 ,"Amit   Shah"  , 34 ,amit.shah@example.com    , 68000 ,2022-10-05 ,Finance    ,"Extra spaces in name"
+11 ,"Kiran Joshi"  , 29 ,kiran.joshi@example.com  , 70000 ,2022-11-30 ,Finance    ,"Trailing space"
+12 ,"Pooja Mehta"  , 25 ,pooja.mehta@example.com  , 62000 ,2022-12-01 ,IT         ,
+13 ,"Ramesh Kumar" ,    ,ramesh.kumar@example.com , 58000 ,2023-01-10 ,Sales      ,"Age missing"
+14 ,"Alok Mishra"  , 33 ,alok.mishra@example.com  , 61000 ,2023-02-05 ,IT         ,"Normal row"
+15 ,PriyaMalhotra  , 28 ,priya.m@example.com      , 64000 ,2023-03-01 ,HR         ,"Multiline name"
+17 ,"Sneha Patel"  , 27 ,sneha.patel@example.com  , 54000 ,2022-13-01 ,Marketing  ,"Invalid month"
+18 ,"Ajay Kumar"   , 29 ,ajay.kumar@example.com   , 57000 ,2022-02-30 ,IT         ,"Invalid date"
+21 ,"Arjun Verma"  , 24 ,arjun.verma@example.com  , 48000 ,2022/06/15 ,IT         ,"Date slash format"
+23 ,"Neel Shah"    ,    ,neel.shah@example.com    , 53000 ,2022-08-20 ,Finance    ,"Whitespace age"
+24 ,"Pankaj Yadav" , 32 ,pankaj.yadav@example.com , 56000 ,2022-09-25 ,Operations ,
+27 ,"Divya Nair"   , 27 ,divya.nair@example.com   , 62000 ,2022-12-15 ,Marketing  ,Normal
+28 ,"Ravi Kumar"   , 29 ,ravi.kumar@example.com   , 64000 ,2023-01-18 ,IT         ,"Extra, comma, in notes"
+31 ,"Sameer Khan"  , 34 ,sameer.khan@example.com  , 70000 ,2023-03-12 ,Finance    ,Normal
+32 ,NishaGupta     , 26 ,nisha.g@example.com      , 52000 ,2023-04-01 ,HR         ,"Multiline again"
+33 ,"Karthik R"    , 28 ,karthik.r@example.com    , 55000 ,2023-05-10 ,IT         ,Normal
