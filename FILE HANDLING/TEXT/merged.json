@@ -1,0 +1,22 @@
+[
+{   "email":"rahul@test.com",
+    "name":"Rahul",
+    "id":1
+},
+
+{
+    "name":"Amit",
+    "id":2,
+    "email":"amit@test.com"
+},
+{
+    "role":"User",
+    "id":2
+},
+{
+    "role":"Admin",
+    "name":"Sara",
+    "id":3,
+    "email":"sara@test.com"
+}
+]
