@@ -1,0 +1,27 @@
+[
+   {
+      "Name" : "Rahul",
+      "City" : "Chandigarh",
+      "Age" : 21
+   },
+   {
+      "Name" : "Raghav",
+      "City" : "Banur",
+      "Age" : 22
+   },
+   {
+      "City" : "Mohali",
+      "Name" : "Sehaj",
+      "Age" : 20
+   },
+   {
+      "Age" : 23,
+      "Name" : "Sujal",
+      "City" : "Punjab"
+   },
+   {
+      "Age" : 19,
+      "Name" : "Kamal",
+      "City" : "Rajpura"
+   }
+]

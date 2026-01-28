@@ -1,0 +1,16 @@
+2026-01-24 10:00:01 INFO  Application started successfully
+2026-01-24 10:00:05 INFO  User login attempt: user=rahul
+2026-01-24 10:00:07 WARN  Password attempt failed for user=rahul
+2026-01-24 10:00:10 INFO  User login successful: user=rahul
+2026-01-24 10:02:15 INFO  Fetching data from database
+2026-01-24 10:02:18 ERROR Database connection timeout
+2026-01-24 10:03:00 WARN  Retrying database connection (attempt 2)
+2026-01-24 10:03:05 INFO  Database connection restored
+2026-01-24 10:05:20 INFO  Processing request: id=1023
+2026-01-24 10:05:22 ERROR NullPointerException in module=payment
+2026-01-24 10:06:00 INFO  Application running normally
+2026-01-24 10:07:45 WARN  Memory usage exceeded 75%
+2026-01-24 10:08:30 INFO  Scheduled cleanup task started
+2026-01-24 10:08:35 INFO  Cleanup completed successfully
+2026-01-24 10:09:10 ERROR Failed to write output file: permission denied
+2026-01-24 10:10:00 INFO  Application shutdown initiated
