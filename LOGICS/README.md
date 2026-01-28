@@ -13,6 +13,9 @@ Rotates an array by `k` positions using a shifting method (element-by-element mo
 ### `Array_rotation1.pl`
 Rotates an array by `k` positions using the reversal algorithm (reversing parts of the array).
 
+### `Conflict_Resolution_Demo.pl`
+Demonstrates the logic for identifying and resolving identical merge conflict blocks automatically.
+
 ### `Missing_number.pl`
 Finds the missing number in a contiguous sequence of integers using the sum formula `N * (N + 1) / 2`.
 
