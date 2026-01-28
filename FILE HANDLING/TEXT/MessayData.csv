@@ -1,17 +1,17 @@
-ID, Name , Age,Email, Salary ,Join Date,Department,Notes
-1, "Rahul Sharma", 23 , rahul.sharma@example.com ,50000,2022-01-15,IT,"Good performer"
-2,Anita Singh,, anita.singh@@example.com, 60000 ,15/02/2022,HR,
-3, "John, Doe", 29,john.doe@example.com,70000,2022/03/01,Finance,"Has, comma in name"
-4,Michael,Thirty,michael@example.com,80000,2022-04-10,IT,"Age is text"
-5, , 35 ,missing.name@example.com,90000,2022-05-20,Sales,"Name missing"
-6,David Kumar,28,david.kumar@example.com,not_available,2022-06-18,IT,"Salary invalid"
-7,Neha Verma,27,neha.verma@example.com,65000,,Marketing,"Missing join date"
-8,Rohit Patil,26,rohit.patil@example,55000,2022-08-01,IT,"Invalid email"
-9,Sunita Rao,31,sunita.rao@example.com,72000,2022-09-12,"HR","Department quoted"
-10,"Amit   Shah",34,amit.shah@example.com,68000,2022-10-05,Finance,"Extra spaces in name"
-11,Kiran Joshi,29,kiran.joshi@example.com,70000,2022-11-30,Finance,"Trailing space " 
-12,Pooja Mehta,25,pooja.mehta@example.com,62000,2022-12-01,IT,""
-13,Ramesh Kumar, ,ramesh.kumar@example.com,58000,2023-01-10,Sales,"Age missing"
-14,Alok Mishra,33,alok.mishra@example.com,61000,2023-02-05,IT,"Normal row"
-15,"Priya
-Malhotra",28,priya.m@example.com,64000,2023-03-01,HR,"Multiline name"
+ID, Name          , Age   , Email                   , Salary       , Join Date , Department, Notes
+ 1, "Rahul Sharma", 23    , rahul.sharma@example.com, 50000        , 2022-01-15, IT        , "Good performer"
+ 2, Anita Singh   ,       , anita.singh@@example.com, 60000        , 15/02/2022, HR        , 
+ 3, "John, Doe"   , 29    , john.doe@example.com    , 70000        , 2022/03/01, Finance   , "Has, comma in name"
+ 4, Michael       , Thirty, michael@example.com     , 80000        , 2022-04-10, IT        , "Age is text"
+ 5,               , 35    , missing.name@example.com, 90000        , 2022-05-20, Sales     , "Name missing"
+ 6, David Kumar   , 28    , david.kumar@example.com , not_available, 2022-06-18, IT        , "Salary invalid"
+ 7, Neha Verma    , 27    , neha.verma@example.com  , 65000        ,           , Marketing , "Missing join date"
+ 8, Rohit Patil   , 26    , rohit.patil@example     , 55000        , 2022-08-01, IT        , "Invalid email"
+ 9, Sunita Rao    , 31    , sunita.rao@example.com  , 72000        , 2022-09-12, "HR"      , "Department quoted"
+10, "Amit   Shah" , 34    , amit.shah@example.com   , 68000        , 2022-10-05, Finance   , "Extra spaces in name"
+11, Kiran Joshi   , 29    , kiran.joshi@example.com , 70000        , 2022-11-30, Finance   , "Trailing space "
+12, Pooja Mehta   , 25    , pooja.mehta@example.com , 62000        , 2022-12-01, IT        , ""
+13, Ramesh Kumar  ,       , ramesh.kumar@example.com, 58000        , 2023-01-10, Sales     , "Age missing"
+14, Alok Mishra   , 33    , alok.mishra@example.com , 61000        , 2023-02-05, IT        , "Normal row"
+15, "Priya
+    Malhotra"     , 28    , priya.m@example.com     , 64000        , 2023-03-01, HR        , "Multiline name"
