@@ -1,0 +1,13 @@
+<library>
+  <book id="101">
+    <title>Perl Basics</title>
+    <author>Tom</author>
+    <price>299</price>
+  </book>
+
+  <book id="102">
+    <title>Advanced Perl</title>
+    <author>Larry</author>
+    <price>499</price>
+  </book>
+</library>

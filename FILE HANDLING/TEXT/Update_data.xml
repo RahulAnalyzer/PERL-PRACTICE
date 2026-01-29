@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<library>
+  <book id="101" category="programming">
+    <title>Perl Basics</title>
+    <author>Tom</author>
+    <price>349</price>
+  </book>
+
+  <book id="102">
+    <title>Advanced Perl</title>
+    <author>Larry</author>
+    <price>499</price>
+  </book>
+<book id="102">
+<title>Advance Perl</title>
+<author>Larry</author>
+<price>459</price>
+</book>
+</library>
