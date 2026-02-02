@@ -4,6 +4,7 @@ BEGIN {
     push @INC , 'C:/Users/LEGION/OneDrive/Desktop/PERL PROGRAMMING/OOPS/BASIC-OOPS';
 }
 use Library;
+use Book;
 
 my $library = Library->new();
 
@@ -21,7 +22,8 @@ for(1 .. $count){
 
     
 
-    $library->add_book($title , $author);
+    my $book = Book->new($title , $author);
+    $library->add_book($book);
 }
 
 $library->list_book();
