@@ -1,30 +1,47 @@
-# Modern Perl Data-Structure Assignments
+# Modern Perl Data Structures
 
-This directory focuses on advanced data structures in Perl, such as complex hashes, arrays of arrays, and data transformation techniques.
+This directory focuses on **Complex Data Structures** (references). Real-world applications rarely use simple arrays or hashes; they use "Arrays of Arrays" or "Hashes of Hashes".
 
-## Files
+## Core Concepts
 
-### `Category_wise_Sales.pl`
-Aggregates sales data by category. Reads a flat list of category-amount pairs and sums the amounts for each category using a hash.
+### 1. References
+A reference is a scalar that points to another data type (like a pointer in C).
+- Create a reference using backslash `\`: `my $ref = \@array;`.
+- **Anonymous Reference**:
+  - Array Ref: `my $aref = [1, 2, 3];` (Square brackets).
+  - Hash Ref: `my $href = { name => 'A', val => 1 };` (Curly braces).
 
-### `Customer_list_cleaner.pl`
-Filters user input to create a clean list of customers. Removes empty or undefined entries using `grep`.
+### 2. Dereferencing
+To get the data back from a reference:
+- arrow operator `->`: `$aref->[0]` or `$href->{key}`.
+- sigil wrapper: `@$aref` (to get the whole array).
+
+### 3. List of Lists (LoL) -> `list_of_list.pl`
+A table-like structure.
+```perl
+my @matrix = (
+    [1, 2, 3],
+    [4, 5, 6]
+);
+print $matrix[1]->[0]; # Prints 4
+```
+
+### 4. Hash Transformations
+- **`Category_wise_Sales.pl`**: Grouping data.
+  - Logic: Iterate through a flat list, use the category as the Hash key, and accumulate values.
+  - `$sales{$category} += $amount;`
+
+## Script Highlights
 
 ### `Departement_Employee_Aggregator.pl`
-Organizes employees into departments.
-- Input: A list of `[Department, Employee]` pairs.
-- Output: A hash where keys are departments and values are arrays of employees.
+Converts a flat list of `[Dept, Employee]` into a hierarchical structure:
+```perl
+{
+    'IT'  => ['Alice', 'Riya'],
+    'HR'  => ['Bob']
+}
+```
+This is essential for organizing data for reports or API responses.
 
 ### `Immutable_coordinate_structure.pl`
-Demonstrates simple data unpacking. Reads X, Y, Z coordinates into an array and unpacks them into individual variables.
-
-### `Product_Price_Mapper.pl`
-Maps two corresponding lists (Product Names and Product Prices) into a single hash for easy lookup (`Product => Price`). Includes validation for equal array lengths.
-
-### `Region_Deduplication.pl`
-Removes duplicate region names from a list using a hash to track seen items.
-
-### `list_of_list.pl`
-Transforms valid structure data:
-- Input: A list of headers and a list of rows (arrays).
-- Output: A list of hashes, where each hash represents a row with keys from the headers.
+Perl doesn't have native "structs", but we can use anonymous arrays to group x, y, z coordinates and treat them as a single scalar unit.
