@@ -24,6 +24,7 @@ eval{
         ALTER TABLE employee
         ADD COLUMN departments VARCHAR(50)
     });
+    
 
     $dbh->commit();
     print "Department Columns Added Successfully\n";
