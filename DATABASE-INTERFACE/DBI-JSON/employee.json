@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Ravdeep Singh",
+    "email": "raveed.singh@example.com",
+    "salary": 55000,
+    "dept": "IT",
+    "mob": "9857658445"
+  },
+  {
+    "name": "Arvind Verma",
+    "email": "arvind.verma@example.com",
+    "salary": 62000,
+    "dept": "Data analyst",
+    "mob": "6698701278"
+  },
+  {
+    "name": "Ankhush",
+    "email": "ankhush@example.com",
+    "salary": 48000,
+    "dept": "DevOps",
+    "mob": 9877456213
+  }
+]
