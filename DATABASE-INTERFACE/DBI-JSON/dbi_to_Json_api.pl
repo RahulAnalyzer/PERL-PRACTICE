@@ -54,6 +54,7 @@ my $dbh = DBI->connect(
 );
 my $users = $data->{users};
 my $sth = $dbh->prepare(q{
+
     INSERT INTO jsondetail (id , firstName , lastName , maidenName , age , gender , email, phone , username , password , birthDate , height , weight)
     VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO NOTHING
 });
