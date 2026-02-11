@@ -1,22 +1,44 @@
-# PERL REVIEW - Concepts Refresher
+# PERL REVIEW - Code Concepts Refresher
 
-This directory contains review exercises covering Perl data structures, regular expressions, and algorithm implementation.
+This directory serves as a practice ground for reviewing essential Perl features, particularly Data Structures and Regex.
 
-## Files
+## Core Concepts
 
-### `Dept_tax.pl`
-Processes a list of employees. Filters those with a salary greater than 50,000, calculates a 10% tax, and constructs a new list of employee records with tax details.
+### 1. Complex Data Structures
+Perl allows nesting of data structures (Hash of Arrays, Array of Hashes).
+- **Array of Hashes (`Dept_tax.pl`)**:
+  ```perl
+  my @employees = (
+      { name => "Alice", salary => 60000 }, # Anonymous Hash Ref
+      { name => "Bob",   salary => 45000 }
+  );
+  ```
+  - Accessing: `$employees[0]->{salary}`.
+  - *Concept*: Useful for representing database rows or CSV records.
+
+### 2. Hash Sorting (`marks.pl`)
+Hashes are unordered. To "sort a hash," we actually sort the **keys** based on the **values**.
+- **Code**: `sort { $hash{$b} <=> $hash{$a} } keys %hash`
+- **Explanation**: The block `{}` defines the comparison logic. Here, it compares values in descending numeric order (`<=>`).
+
+### 3. Extended Regex (`dep_regex.pl`)
+For complex patterns, we use the `/x` modifier. It allows us to add whitespace and comments *inside* the regex for readability.
+```perl
+m/
+  ^          # Start
+  (\w+)      # Capture Username
+  @
+  ([\w.]+)   # Capture Domain
+/x;
+```
+
+## Script Highlights
 
 ### `Detect.pl`
-Identifies duplicate elements in an array and reports their indices.
-- Input: `["a","b","a","c","b"]`
-- Output shows positions of `a` and `b`.
+Finds duplicates in an array.
+- *Logic*: Iterates through the array, using a Hash to track seen items. If an item exists in the hash, it's a duplicate.
 
 ### `count_word.pl`
-Counts the frequency of each character in a given string (e.g., 'w3resource') and prints the result as a dictionary.
-
-### `dep_regex.pl`
-Uses extended regular expressions with comments (`/x` modifier) to validate and parse a user identifier string in the format `username@department.company`. Extracts and prints the components if valid.
-
-### `marks.pl`
-Sorts a hash of subject scores in descending numerical order of the scores and converts the data into a list of tuples `[Subject, Score]`.
+Frequency analysis.
+- *Technique*: `$count{$char}++`.
+- This simple line initializes the key if missing (to 0) and increments it, building a histogram of characters.
