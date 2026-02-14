@@ -1,0 +1,5 @@
+Wed Feb 11 17:05:52 2026 | APP_START | program started
+Wed Feb 11 17:05:52 2026 | INSERT | id=999 rows=1
+Wed Feb 11 17:05:52 2026 | UPDATE | id=999 age:30->new_age rows=1
+Wed Feb 11 17:05:52 2026 | DELETE | id=999 rows=1
+Wed Feb 11 17:05:52 2026 | APP_END | program finished
