@@ -1,0 +1,6 @@
+10," ""Amit   Shah"" "," 34    "," amit.shah@example.com   "," 68000        "," 2022-10-05"," Finance   "," ""Extra spaces in name"""
+11," Kiran Joshi   "," 29    "," kiran.joshi@example.com "," 70000        "," 2022-11-30"," Finance   "," ""Trailing space """
+12," Pooja Mehta   "," 25    "," pooja.mehta@example.com "," 62000        "," 2022-12-01"," IT        "," """""
+13," Ramesh Kumar  ","       "," ramesh.kumar@example.com"," 58000        "," 2023-01-10"," Sales     "," ""Age missing"""
+14," Alok Mishra   "," 33    "," alok.mishra@example.com "," 61000        "," 2023-02-05"," IT        "," ""Normal row"""
+15," ""Priya"
