@@ -12,6 +12,8 @@ my $reject = "$Bin/RejectCSV.csv";
 my $input_q  = Thread::Queue->new();
 my $output_q = Thread::Queue->new();
 
+
+
 my $WORKERS = 2;
 
 # ---------------- Worker ----------------
