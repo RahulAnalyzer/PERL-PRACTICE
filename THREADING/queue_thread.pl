@@ -80,7 +80,7 @@ sub background_task{
     print "Background task done\n";
 }
 
-my $t = threads->create(\&background_task);
+$t = threads->create(\&background_task);
 $t->detach();
 
 print "Main Continues without waiting\n";
